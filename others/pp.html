@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* Container for the profile picture */
+    .profile-container {
+      position: relative;
+      width: 150px;
+      height: 150px;
+      overflow: hidden;
+      border-radius: 50%;
+      border: 5px solid #551a8b; /* Border color */
+      box-shadow: 0 0 10px #551a8b; /* Optional: Add a subtle shadow */
+      transition: transform 0.3s ease-in-out;
+    }
+
+    /* Profile picture */
+    .profile-picture {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+
+    /* Hover effect to scale the image */
+    .profile-container:hover {
+      transform: scale(1.3);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Replace the image source with your actual profile picture -->
+  <div class="profile-container">
+    <img class="profile-picture" src="pp.jpg" alt="Profile Picture">
+  </div>
+
+</body>
+</html>

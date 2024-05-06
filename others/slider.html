@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCC Photo Slider</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000000;
+        }
+
+        #slider-container {
+            vertical-align: middle;
+
+            width: 80%;
+            max-width: 1000px;
+            margin: 50px auto;
+            overflow: hidden;
+            border-radius: 10px;
+            /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);*/
+        }
+
+        #slider {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slide {
+            min-width: 100%;
+            box-sizing: border-box;
+        }
+
+        img {
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            width: auto;
+            height: 564px;
+            border-radius: 10px;
+        }
+
+        #prev,
+        #next {
+            background: #dfdfdf;
+            cursor: pointer;
+            position: absolute;
+            top: 89%;
+            width: auto;
+            padding: 10px;
+            margin-top: -17px;
+            color: #000000;
+            font-weight: bold;
+            font-size: 20px;
+            transition: 0.6s ease;
+            border-radius: 25px;
+            user-select: none;
+        }
+
+        #next {
+            background: #dfdfdf;
+            right: 141px;
+            border-radius: 25px;
+        }
+
+        #prev:hover,
+        #next:hover {
+            color: #ffffff;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .header 
+                {
+                color: #ffffff;
+                font-size: 50px;
+                text-align: center;
+                padding: 13px;
+                background: #000000;
+            }
+        
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <H2>NCC image Gallery</H2>
+    </div>
+
+    <div id="slider-container">
+        <div id="slider">
+            <div class="slide">
+                <img src="ncc/img 1.jpg" alt="Image 1">
+            </div>
+            <div class="slide">
+                <img src="ncc/img 2.jpg" alt="Image 2">
+            </div>
+            <div class="slide">
+                <img src="ncc/img 3.jpg" alt="Image 3">
+            </div>
+            <div class="slide">
+                <img src="ncc/img 4.jpg" alt="Image 4">
+            </div>
+            <div class="slide">
+                <img src="ncc/img 5.jpg" alt="Image 5">
+            </div>
+            <div class="slide">
+                <img src="ncc/img 6.jpg" alt="Image 6">
+            </div>
+            <div class="slide">
+                <img src="ncc/img 7.jpg" alt="Image 7">
+            </div>
+
+            <!-- Add more slides as needed -->
+        </div>
+
+        <div id="prev" onclick="prevSlide()">&#10094;</div>
+        <div id="next" onclick="nextSlide()">&#10095;</div>
+    </div>
+
+    <script>
+        let currentIndex = 0;
+
+        function showSlide(index) {
+            const slider = document.getElementById('slider');
+            const slides = document.getElementsByClassName('slide');
+
+            if (index >= slides.length) {
+                currentIndex = 0;
+            } else if (index < 0) {
+                currentIndex = slides.length - 1;
+            } else {
+                currentIndex = index;
+            }
+
+            const translateValue = -currentIndex * 100 + '%';
+            slider.style.transform = 'translateX(' + translateValue + ')';
+        }
+
+        function nextSlide() {
+            showSlide(currentIndex + 1);
+        }
+
+        function prevSlide() {
+            showSlide(currentIndex - 1);
+        }
+
+        // Automatic slide change after 5 seconds
+        setInterval(nextSlide, 5000);
+    </script>
+
+</body>
+
+</html>

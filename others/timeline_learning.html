@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programming Language Timeline</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #000;
+            margin: 0;
+            padding: 0;
+            color: #fff;
+        }
+
+        .timeline {
+            width: 80%;
+            margin: 50px auto;
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+            position: relative;
+        }
+
+        .timeline-item {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .marker {
+    box-shadow: 0 0 10px #808080;
+    border: 1px solid #ffffff;
+    width: 40px;
+    height: 40px;
+    background-color: #000000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+        .line {
+    position: absolute;
+    width: 164px;
+    height: 2px;
+    background-color: #fff;
+    top: 21%;
+    left: 50%;
+    transform: translate(-114%, -50%);
+}
+
+        .language {
+            color: #fff;
+        }
+        .image{
+            max-width: 46px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="timeline">
+        <div class="timeline-item">
+            <div class="marker">1</div>
+            <div class="line"></div>
+            <div class="language"><img src="c.png" alt="c logo" class="image"></div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="marker">2</div>
+            <div class="line"></div>
+            <div class="language"><img src="c++.png" alt="c++ logo" class="image"></div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="marker">4</div>
+            <div class="line"></div>
+            <div class="language"><img src="java.png" alt="java logo" class="image"></div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="marker">5</div>
+            <div class="line"></div>
+            <div class="language"><img src="python.png" alt="python logo" class="image"></div>
+        </div>
+
+        <div class="timeline-item">
+        <div class="marker">6</div>
+            <div class="line"></div>
+            <img src="html.png" alt="Html logo" class="image">
+            <div class="language"></div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="marker">7</div>
+            <div class="line"></div>
+            <div class="language"><img src="css.png" alt="css logo" class="image"></div>
+        </div>
+    </div>
+
+</body>
+
+</html>

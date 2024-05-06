@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1 {
+    color: #fff;
+    background-color: #000;
+    text-decoration: underline;
+    font-size: 48px;
+    font-family: 'Poppins', sans-serif;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  p {
+    color: #555;
+    font-style: italic;
+  }
+  
+  /* Styling to make the content "pop" */
+  .pop {
+    background-color: #fff;
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+  }
+  
+  .pop:before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 20px;
+    border-style: solid;
+    border-color: transparent transparent #fff transparent;
+  }
+  
+  .pop h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .pop p {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+  
+    </style>
+    <title>Decorated Heading</title>
+</head>
+
+<body>
+    <h1>Heading with Decoration</h1>
+    <div class="pop">
+        <p>This is a decorated description for the heading. It might include some additional information or details
+            about the heading.</p>
+    </div>
+
+</body>
+
+</html>
